@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>my  forms</title>
+</head>
+<body>
+	{% extends 'newapp/bcd.html' %}
+    {% block content %}
+    <h1>update table</h1>
+    <form  method="POST">
+        DIR id <input type="text" name="dirid" value= "{{ dir.dirno }}" >
+        DIR name <input type="text" name="dirname" value= "{{ dir.dirname }}" >
+        DIR salary <input type="text" name="dirsalary" value= "{{ dir.dirsalary }}" >
+        DIR MOVIE <input type="text" name="dirMOVIE" value= "{{ dir.dirMOVIE }}" >
+       {% csrf_token %}
+     
+    </form>
+
+
+
+
+   
+
+   
+    {% endblock %}
+
+
+
+
+</body>
+</html>

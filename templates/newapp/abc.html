@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>my  forms</title>
+</head>
+<body>
+	{% extends 'newapp/bcd.html' %}
+    {% block content %}
+    <h1>DIRECTORS DETAILS</h1>
+    <table>
+    	<thead>
+    		<th>dirno</th>
+    		<th>dirname</th>
+    		<th>dirsalary</th>
+    		<th>dirmovie</th>
+    	</thead>
+    	<tr>
+    		{% for dr in dir %}
+    		<td>{{dr.dirno}}</td>
+    		<td>{{dr.dirname}}</td>
+    		<td>{{dr.dirsalary}}</td>
+    		<td>{{dr.dirMOVIE}}</td>
+            <td> <a href="/newapp/delete/{{dr.id}}">  DELETE</a>  </td>    
+                <td><a href="/newapp/updateview/{{dr.id}}">update</a></td>
+    	  
+    	</tr>
+
+    	    {% endfor %}   
+
+    </table>
+    <a href="/newapp/dirnames"><button type="button">save</button> </a>
+
+    {% endblock %}
+
+
+
+
+</body>
+</html>

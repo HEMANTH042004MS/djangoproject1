@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	{% extends 'newapp/bcd.html' %}
+	{% block content %}
+<h1> diretor form </h1>
+<form method="POST">
+	{{form.as_p}}
+	{% csrf_token %}
+
+<input type="submit" name="add director">
+
+</form>
+
+   {% endblock %}
+
+</body>
+</html>
